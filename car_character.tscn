@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3bhqagqp7enr"]
+
+[ext_resource type="Texture2D" uid="uid://bvlm0v17p6fp8" path="res://Sprites/car.png" id="1_sfr56"]
+
+[node name="CarCharacter" type="Sprite2D"]
+
+[node name="Car" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.121773, 0.121773)
+texture = ExtResource("1_sfr56")
