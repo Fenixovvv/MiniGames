@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bvlm0v17p6fp8" path="res://Sprites/car.png" id="1_sfr56"]
 
 [node name="CarCharacter" type="Sprite2D"]
+rotation = 1.5708
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("1_sfr56")
 
 [node name="Car" type="Sprite2D" parent="."]
 rotation = 1.5708
