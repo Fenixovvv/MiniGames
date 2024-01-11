@@ -1,14 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bckmegxvaw35l"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_20a6x"]
-[ext_resource type="Texture2D" uid="uid://dke436l0fg1bx" path="res://Sprites/road.jpg" id="1_yvvib"]
 [ext_resource type="PackedScene" uid="uid://d3bhqagqp7enr" path="res://car_character.tscn" id="2_4426t"]
+[ext_resource type="PackedScene" uid="uid://costo0u7jj4er" path="res://road.tscn" id="2_jgf0o"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_20a6x")
+road = ExtResource("2_jgf0o")
 car = ExtResource("2_4426t")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(362, 713.737)
-scale = Vector2(0.866425, 1.72208)
-texture = ExtResource("1_yvvib")

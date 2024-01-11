@@ -1,24 +1,33 @@
 extends Node2D
 
+@export var road: PackedScene
 @export var car: PackedScene
-@onready var start = true
-var car_instance: Sprite2D
-var hor_vector: Vector2
+
+@onready var first_frame = true
+
+var car_instance: CharacterBody2D
+var road_instance: Sprite2D
+var road_array = [
+		road.instantiate(), road.instantiate(), road.instantiate(), road.instantiate(), 
+		road.instantiate(), road.instantiate(), road.instantiate(), road.instantiate()
+		]
 
 func _ready():
 	print("READY")
+	car_instance = car.instantiate()
+	add_child(car_instance)
+	car_instance.position = Vector2(360, 720)
 	
+	# Road instances with even number are on left side; with odd numbers - on right
+
+	for road_num in 8:
+		road_array[road_num].position.x = 180 + 360 * ((road_num + 1) % 2)
+		# Finish road spawn positions and check if works
+		road_array[road_num].position.y = 0
+		
 func _process(delta):
-	if start:
-		car_instance = car.instantiate()
-		add_child(car_instance)
-		car_instance.position = Vector2(360, 720)
-		start = false
+	pass
 	
-	if Input.is_action_pressed("ui_left") and car_instance.position.x > 55:
-		hor_vector = Vector2(-10, 0)
-	elif Input.is_action_pressed("ui_right") and car_instance.position.x < 665:
-		hor_vector = Vector2(10, 0)
-	
-	car_instance.position += hor_vector
-	hor_vector = Vector2(0, 0)
+
+func road_managment():
+	pass

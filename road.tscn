@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://costo0u7jj4er"]
+
+[ext_resource type="Texture2D" uid="uid://dke436l0fg1bx" path="res://Sprites/road.jpg" id="1_lpuop"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.433, 0.868)
+texture = ExtResource("1_lpuop")

@@ -1,13 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3bhqagqp7enr"]
+[gd_scene load_steps=4 format=3 uid="uid://d3bhqagqp7enr"]
 
+[ext_resource type="Script" path="res://car_character.gd" id="1_on2hd"]
 [ext_resource type="Texture2D" uid="uid://bvlm0v17p6fp8" path="res://Sprites/car.png" id="1_sfr56"]
 
-[node name="CarCharacter" type="Sprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_26l02"]
+radius = 190.909
+height = 810.0
+
+[node name="CarCharacter" type="CharacterBody2D"]
 rotation = 1.5708
 scale = Vector2(0.11, 0.11)
+script = ExtResource("1_on2hd")
+
+[node name="CarTexture" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_sfr56")
 
-[node name="Car" type="Sprite2D" parent="."]
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(5, 0)
 rotation = 1.5708
-scale = Vector2(0.121773, 0.121773)
-texture = ExtResource("1_sfr56")
+shape = SubResource("CapsuleShape2D_26l02")
