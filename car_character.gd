@@ -8,7 +8,6 @@ const SCREEN_WIDTH = 720
 
 func _ready():
 	car_width = 49
-	print("Car width", car_width)
 	
 func _process(delta):
 	movement()
